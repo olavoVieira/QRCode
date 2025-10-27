@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Outfit', sans-serif;
+}
+:root {
+    --card-radius: 16px;
+    --card-padding: 24px;
+    --bg: #f0f2f5;
+    --card-bg: #ffffff;
+    --shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: var(--bg);
+    padding: 20px;
+}
+
+section {
+    background: var(--card-bg);
+    border-radius: var(--card-radius);
+    padding: var(--card-padding);
+    box-shadow: var(--shadow);
+    max-width: 360px;
+    width: 100%;
+    text-align: center;
+}
+
+section img.img {
+    display: block;
+    margin: 0 auto 16px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+section p {
+    margin: 8px 0;
+    color: #333;
+    line-height: 1.4;
+}
+
+
+.intro-text {
+    font-weight: 700;
+}
+
+/* Responsividade para smartphones */
+@media (max-width: 420px) {
+    :root {
+        --card-padding: 16px;
+        --card-radius: 12px;
+    }
+
+    body {
+        padding: 12px;
+    }
+
+    section {
+        padding: var(--card-padding);
+        max-width: 340px;
+        border-radius: var(--card-radius);
+    }
+
+    section img.img {
+        max-width: 280px;
+        margin-bottom: 12px;
+    }
+
+    .intro-text {
+        font-size: 18px;
+        margin-bottom: 6px;
+    }
+
+    section p {
+        font-size: 14px;
+    }
+}
+
+/* Ajuste extra para telas muito pequenas */
+@media (max-width: 360px) {
+    section {
+        max-width: 320px;
+    }
+
+    section img.img {
+        max-width: 240px;
+    }
+
+    .intro-text {
+        font-size: 16px;
+    }
+
+    section p {
+        font-size: 13px;
+    }
+}
